@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 ]
 
 # My Apps
-INSTALLED_APPS += ["users"]
+INSTALLED_APPS += ["users", "lightning_talk"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
