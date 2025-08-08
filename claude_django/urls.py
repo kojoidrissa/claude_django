@@ -17,13 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from neapolitan.views import CRUDView
+import lightning_talks
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
 
-import lightning_talks
 
 class LightningTalkView(CRUDView):
     model = lightning_talks.models.LightningTalk
