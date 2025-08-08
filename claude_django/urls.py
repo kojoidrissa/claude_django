@@ -16,7 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from neapolitan.views import CRUDView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+
+import lightning_talks
+
+class LightningTalkView(CRUDView):
+    model = lightning_talks.models.LightningTalk
+    fields = ["speaker_name", "title", "description", "is_accepted", "submitted_at"]
+
+urlpatterns += LightningTalkView.get_urls()
