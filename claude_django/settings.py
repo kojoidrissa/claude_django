@@ -42,6 +42,9 @@ INSTALLED_APPS = [
 # My Apps
 INSTALLED_APPS += ["users", "lightning_talks"]
 
+# Third Party Apps
+INSTALLED_APPS += ["neapolitan"]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
